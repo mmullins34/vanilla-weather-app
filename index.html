@@ -15,7 +15,82 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather</h1>
+         <div class="search">
+            <div class="row">
+                <div class="col-6">
+                 <form id = "city-form">
+                  <input 
+                  type="text" 
+                  placeholder="Enter a City"
+                  autocomplete="off"
+                  autofocus="on"
+                  id = "city-input" />
+                  <input type="submit" value="Search" />
+                  <input type="submit" value="Current Location" id = "current-location"/>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+      <h1>Atlanta</h1>
+       <p id = "date-input">Thurs Sept 02 5:48pm</p>
+              <div class="main-pic">
+                <img src="images/partlycloudy.jpeg" / width="150px">
+              </div>
+              <p>
+                <span class="main-degree" id = main-temp><strong> 84 <a class = "small" href="#" id = "f-link">ºF</a></strong><span class = "small">|</span><a class = "small" href="#" id = "c-link">ºC</a></span>
+                <div class="second-degree">
+                <span class="left">H: 86º</span> <span class="right"> L: 64º</span>
+              </div>
+              <br>
+              <div class="other">
+              <span class="feel">Feels Like: 84º</span> <span class="chance"> Chance of Rain: 10%</span> <span class="humidity"> Humidity 49%</span>
+            </div>
+              </p>
+              <div class="forecast">
+              <div class="row">
+                <div class="col-2">
+             <img src="images/partlycloudy.jpeg" / width="75px">
+            </div>
+             <div class="col-2">
+             <img src="images/sun.jpeg" / width="75px">
+            </div>
+             <div class="col-2">
+             <img src="images/partlycloudy.jpeg" / width="75px">
+            </div>
+             <div class="col-2">
+             <img src="images/thunderstorm.jpeg" / width="75px">
+            </div>
+             <div class="col-2">
+             <img src="images/partlycloudy.jpeg" / width="75px">
+            </div>
+            </div>
+          </div>
+          <div class="predictions">
+          <div class="row">
+            <div class="col-2">
+              Friday
+              84º|64º
+            </div>
+            <div class="col-2">
+              Saturday
+              84º|61º
+            </div>
+            <div class="col-2">
+              Sunday
+              88º|64º
+            </div>
+            <div class="col-2">
+              Monday
+              84º|68º
+            </div>
+          <div class="col-2">
+            Tuesday
+              86º|66º
+          </div>
+          </div>
+        </div>
+        </div>
     </div>
     <script src="src/app.js"></script>
   </body>
