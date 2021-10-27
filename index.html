@@ -15,9 +15,10 @@
   </head>
   <body>
     <div class="container">
+        <div class="border">
          <div class="search">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                  <form id = "city-form">
                   <input 
                   type="text" 
@@ -29,13 +30,12 @@
                   <input type="submit" value="Current Location" id = "current-location"/>
                 </form>
               </div>
-            </div>
-        </div>
+         </div>
     </div>
       <h1>Atlanta</h1>
        <p id = "date-input">Thurs Sept 02 5:48pm</p>
               <div class="main-pic">
-                <img src="images/partlycloudy.jpeg" / width="150px">
+                <img src="images/partlycloudy.jpeg" width="150px">
               </div>
               <p>
                 <span class="main-degree" id = main-temp><strong> 84 <a class = "small" href="#" id = "f-link">ºF</a></strong><span class = "small">|</span><a class = "small" href="#" id = "c-link">ºC</a></span>
@@ -90,13 +90,15 @@
           </div>
         </div>
     </div>
-        <small>
+    <small>
         <a href="https://github.com/mmullins34/vanilla-weather-app"
-        target="_blank">
+        target="_blank"
+        class="open-link">
         Open-Source Code
         </a>
-        by Marissa Mullins
+         by Marissa Mullins
         </small>
+    </div>    
     </div>
     <script src="src/app.js"></script>
   </body>
