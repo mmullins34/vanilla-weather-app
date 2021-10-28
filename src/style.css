@@ -56,7 +56,15 @@ h1 {
 }
 .right {
   position: relative;
-  left: 85px;
+  left: 75px;
+}
+.high {
+  position: relative;
+  right: 85px;
+}
+.low {
+  position: relative;
+  left: 75px;
 }
 .other {
   font-size: 18px;
@@ -64,14 +72,31 @@ h1 {
 }
 .feel {
   position: relative;
-  right: 65px;
+  right: 180px;
+}
+.move-degree {
+  position: relative;
+  right: 177px;
 }
 .chance {
   position: relative;
+  text-transform: capitalize;
 }
 .humidity {
   position: relative;
-  left: 65px;
+  left: 165px;
+}
+.feels {
+  position: relative;
+  right: 107px;
+}
+.chances {
+  position: relative;
+  right: -13px;
+}
+.humid {
+  position: relative;
+  left: 107px;
 }
 .forecast {
   position: relative;
