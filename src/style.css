@@ -109,3 +109,12 @@ h1 {
 a:hover {
   text-decoration: underline;
 }
+
+p .active {
+  color: black;
+  cursor: default;
+}
+
+p .active:hover {
+  text-decoration: none;
+}

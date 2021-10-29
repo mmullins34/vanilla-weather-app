@@ -1,6 +1,8 @@
 function displayTemp(response) {
+  fTemp = response.data.main.temp;
+
   let tempElement = document.querySelector("#main-temp");
-  tempElement.innerHTML = Math.round(response.data.main.temp);
+  tempElement.innerHTML = Math.round(fTemp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
   let feelElement = document.querySelector("#feels-like");
@@ -74,7 +76,32 @@ function handleSubmit(event) {
   searchCity(cityInput);
 }
 
-searchCity("Atlanta");
+let fTemp = null;
 
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handleSubmit);
+
+function displayCTemp(event) {
+  event.preventDefault();
+  let cTemp = (fTemp - 32) * (5 / 9);
+  fLink.classList.remove("active");
+  cLink.classList.add("active");
+  let tempElement = document.querySelector("#main-temp");
+  tempElement.innerHTML = Math.round(cTemp);
+}
+
+let cLink = document.querySelector("#c-link");
+cLink.addEventListener("click", displayCTemp);
+
+function displayFTemp(event) {
+  event.preventDefault();
+  fLink.classList.add("active");
+  cLink.classList.remove("active");
+  let tempElement = document.querySelector("#main-temp");
+  tempElement.innerHTML = Math.round(fTemp);
+}
+
+let fLink = document.querySelector("#f-link");
+fLink.addEventListener("click", displayFTemp);
+
+searchCity("Atlanta");
