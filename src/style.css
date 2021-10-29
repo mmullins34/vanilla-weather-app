@@ -64,7 +64,7 @@ h1 {
 }
 .low {
   position: relative;
-  left: 75px;
+  left: 70px;
 }
 .other {
   font-size: 18px;
@@ -72,12 +72,9 @@ h1 {
 }
 .feel {
   position: relative;
-  right: 180px;
+  right: 184px;
 }
-.move-degree {
-  position: relative;
-  right: 177px;
-}
+
 .chance {
   position: relative;
   text-transform: capitalize;

@@ -19,3 +19,39 @@ let apiKey = "b5091d2318b2eb092f8861c48c11d8b3";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=${apiKey}&units=imperial`;
 
 axios.get(apiUrl).then(displayTemp);
+
+let now = new Date();
+
+let dateInput = document.querySelector("#date-input");
+
+let date = now.getDate();
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  hours = `0${minutes}`;
+}
+let year = now.getFullYear();
+
+let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let day = days[now.getDay()];
+
+let months = [
+  "Jan",
+  "Feb",
+  "March",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+let month = months[now.getMonth()];
+
+dateInput.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
