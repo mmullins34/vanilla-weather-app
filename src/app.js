@@ -13,6 +13,12 @@ function displayTemp(response) {
   hiElement.innerHTML = Math.round(response.data.main.temp_max);
   let loElement = document.querySelector("#low-temp");
   loElement.innerHTML = Math.round(response.data.main.temp_min);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "b5091d2318b2eb092f8861c48c11d8b3";
@@ -55,3 +61,20 @@ let months = [
 let month = months[now.getMonth()];
 
 dateInput.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+
+function searchCity(city) {
+  let apiKey = "1d038ee28ef2727a9f0310860ac10ae9";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemp);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#city-input").value;
+  searchCity(cityInput);
+}
+
+searchCity("Atlanta");
+
+let cityForm = document.querySelector("#city-form");
+cityForm.addEventListener("submit", handleSubmit);
