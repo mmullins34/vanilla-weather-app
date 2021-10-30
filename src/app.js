@@ -39,9 +39,8 @@ if (hours < 10) {
 }
 let minutes = now.getMinutes();
 if (minutes < 10) {
-  hours = `0${minutes}`;
+  minutes = `0${minutes}`;
 }
-let year = now.getFullYear();
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
@@ -62,7 +61,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-dateInput.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}, ${year}`;
+dateInput.innerHTML = `${day} ${month} ${date} ${hours}:${minutes}`;
 
 function searchCity(city) {
   let apiKey = "1d038ee28ef2727a9f0310860ac10ae9";

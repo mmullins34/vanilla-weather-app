@@ -1,5 +1,6 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "DM Serif Text", serif;
+
   text-align: center;
 }
 
@@ -34,6 +35,21 @@ h1 {
   padding: 20px;
   border: 1px solid cornflowerblue;
   border-radius: 8px;
+  background: rgb(68, 187, 192, 0.5);
+}
+
+.shade {
+  border: 1px solid;
+  border-radius: 8px;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(253, 239, 132) 0%,
+    rgb(247, 198, 169) 54.2%,
+    rgb(21, 186, 196) 100.3%
+  );
+  max-width: 50%;
+  margin: 20px auto;
+  padding: 30px;
 }
 .main-degree {
   font-size: 50px;
@@ -48,7 +64,7 @@ h1 {
 .small {
   font-size: 16px;
   position: relative;
-  top: -25px;
+  top: -22px;
   left: -10px;
   text-decoration: none;
 }
