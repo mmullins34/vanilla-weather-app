@@ -23,11 +23,6 @@ function displayTemp(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "b5091d2318b2eb092f8861c48c11d8b3";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=${apiKey}&units=imperial`;
-
-axios.get(apiUrl).then(displayTemp);
-
 let now = new Date();
 
 let dateInput = document.querySelector("#date-input");
