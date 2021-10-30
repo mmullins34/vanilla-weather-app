@@ -5,8 +5,8 @@ function displayTemp(response) {
   tempElement.innerHTML = Math.round(fTemp);
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = response.data.name;
-  let feelElement = document.querySelector("#feels-like");
-  feelElement.innerHTML = Math.round(response.data.main.feels_like);
+  let windElement = document.querySelector("#wind-speed");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   let rainElement = document.querySelector("#rain");
   rainElement.innerHTML = response.data.weather[0].main;
   let humidityElement = document.querySelector("#humidity");

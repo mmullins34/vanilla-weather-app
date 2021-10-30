@@ -13,6 +13,7 @@ h1 {
 
 .date-input {
   font-size: 18px;
+  margin-bottom: -20px;
 }
 
 .search {
@@ -40,6 +41,10 @@ h1 {
   right: -15px;
 }
 
+.main-pic {
+  margin-bottom: -30px;
+}
+
 .small {
   font-size: 16px;
   position: relative;
@@ -50,59 +55,50 @@ h1 {
 .second-degree {
   font-size: 20px;
 }
+
 .left {
   position: relative;
-  right: 85px;
+  right: 150px;
 }
 .right {
   position: relative;
-  left: 75px;
-}
-.high {
-  position: relative;
-  right: 85px;
-}
-.low {
-  position: relative;
-  left: 70px;
-}
-.other {
-  font-size: 18px;
-  padding: 30px;
-}
-.feel {
-  position: relative;
-  right: 184px;
+  left: 150px;
+  top: -31px;
 }
 
-.chance {
+.middle {
   position: relative;
-  text-transform: capitalize;
 }
-.humidity {
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.other {
+  font-size: 20px;
+}
+
+.description {
   position: relative;
-  left: 165px;
+  right: -5px;
+  font-size: 20px;
+  margin-bottom: 50px;
 }
-.feels {
-  position: relative;
-  right: 107px;
-}
-.chances {
-  position: relative;
-  right: -13px;
-}
-.humid {
-  position: relative;
-  left: 107px;
-}
+
 .forecast {
   position: relative;
-  right: -40px;
+  right: -45px;
   margin: 45px 0;
 }
 .predictions {
   position: relative;
-  right: -42px;
+  right: -44px;
   margin-bottom: 20px;
 }
 
