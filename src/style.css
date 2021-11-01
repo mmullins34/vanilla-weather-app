@@ -1,15 +1,38 @@
 body {
   font-family: "DM Serif Text", serif;
-
   text-align: center;
 }
 
 h1 {
   color: black;
-  font-size: 50px;
+  font-size: 45px;
   font-weight: 100;
   line-height: 28px;
   margin: 20px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p .active {
+  color: black;
+  cursor: default;
+}
+
+p .active:hover {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .date-input {
@@ -47,12 +70,12 @@ h1 {
     rgb(247, 198, 169) 54.2%,
     rgb(21, 186, 196) 100.3%
   );
-  max-width: 50%;
+  max-width: 55%;
   margin: 20px auto;
   padding: 30px;
 }
 .main-degree {
-  font-size: 50px;
+  font-size: 45px;
   position: relative;
   right: -15px;
 }
@@ -64,8 +87,8 @@ h1 {
 .small {
   font-size: 16px;
   position: relative;
-  top: -22px;
-  left: -10px;
+  top: -19px;
+  left: -8px;
   text-decoration: none;
 }
 .second-degree {
@@ -86,16 +109,6 @@ h1 {
   position: relative;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 .other {
   font-size: 20px;
 }
@@ -108,25 +121,19 @@ li {
 }
 
 .forecast {
-  position: relative;
-  right: -45px;
-  margin: 45px 0;
-}
-.predictions {
-  position: relative;
-  right: -44px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #000;
 }
 
-a:hover {
-  text-decoration: underline;
+.forecast-date {
+  font-size: 16px;
 }
 
-p .active {
-  color: black;
-  cursor: default;
+.forecast-temp-min {
+  opacity: 0.5;
 }
 
-p .active:hover {
-  text-decoration: none;
+.forecast-temperatures {
+  font-size: 13px;
 }
