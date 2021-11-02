@@ -21,6 +21,7 @@ function displayTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+  displayForecast();
 }
 
 let now = new Date();
@@ -57,6 +58,29 @@ let months = [
 let month = months[now.getMonth()];
 
 dateInput.innerHTML = `${day} ${month} ${date} ${hours}:${minutes}`;
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+            <div class="forecast-date">${day}</div>
+            <img src="https://openweathermap.org/img/wn/50d@2x.png" alt="" width="75" />
+            <div class="forcast-temperatures">
+              <span class="forecast-temp-max">18º</span> |
+              <span class="forecast-temp-min">12º</span>
+            </div>
+          </div>
+          `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function searchCity(city) {
   let apiKey = "1d038ee28ef2727a9f0310860ac10ae9";
