@@ -60,6 +60,7 @@ li {
   border-radius: 8px;
   background: rgb(68, 187, 192, 0.5);
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
 .shade {
