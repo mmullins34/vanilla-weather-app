@@ -33,21 +33,21 @@
                   autocomplete="off"
                   autofocus="on"
                   id = "city-input" />
-                  <input type="submit" value="Search" />
-                  <input type="submit" value="Current Location" id = "current-location"/>
+                  <input type="submit" class="button-one" value="Search" />
+                  <input type="submit" class="button-two" value="Current Location" id = "current-location"/>
                 </form>
               </div>
          </div>
     </div>
     <div class="shade">
       <h1 id="city"></h1>
-       <p class = "date-input" id = "date-input"></p>
+       <p class = "date-input" id = "date-input"><span class="hour-input"></span></p>
               <div class="main-pic">
                 <img src="" alt="" id="icon" width="150px">
               </div>
               <p>
                 <span class="main-degree"><strong id="main-temp"></strong>
-                    <span><a class = "small active" href="#" id = "f-link">ºF </a></span><span class = "small">|</span><span><a class = "small" href="#" id = "c-link"> ºC</a></span>
+                    <span class = "small active">ºF</span>
                 <div class="description" id="rain"></div>
     </div>
                 <div class="second-degree">
@@ -71,11 +71,11 @@
     <div class="forecast" id="forecast">
         <div class="row">
           <div class="col-2">
-            <div class="forecast-date">Thur</div>
-            <img src="https://openweathermap.org/img/wn/50d@2x.png" alt=""  />
+            <div class="forecast-date"></div>
+            
             <div class="forcast-temperatures">
-              <span class="forecast-temp-max">18º</span> |
-              <span class="forecast-temp-min">12º</span>
+              <span class="forecast-temp-max"></span>
+              <span class="forecast-temp-min"></span>
             </div>
           </div>
         </div>

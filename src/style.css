@@ -7,7 +7,7 @@ h1 {
   color: black;
   font-size: 40px;
   font-weight: 100;
-  line-height: 28px;
+  line-height: 35px;
   margin: 20px;
 }
 
@@ -56,9 +56,10 @@ li {
 
 .border {
   padding: 20px;
-  border: 1px solid cornflowerblue;
+  border: 1px solid black;
   border-radius: 8px;
   background: rgb(68, 187, 192, 0.5);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .shade {
@@ -73,6 +74,15 @@ li {
   max-width: 50%;
   margin: 20px auto;
   padding: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.button-one {
+  background: rgb(21, 186, 196);
+}
+
+.button-two {
+  background: rgb(247, 198, 169);
 }
 
 .shade-two {
@@ -85,11 +95,12 @@ li {
     rgb(21, 186, 196) 100.3%
   );
   margin-bottom: 30px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .main-degree {
   font-size: 40px;
   position: relative;
-  right: -20px;
+  right: -8px;
 }
 
 .main-pic {
@@ -100,7 +111,7 @@ li {
   font-size: 16px;
   position: relative;
   top: -14px;
-  left: -5px;
+  left: -8px;
   text-decoration: none;
 }
 .second-degree {
@@ -144,7 +155,7 @@ li {
 }
 
 .forecast-temp-min {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .forecast-temperatures {

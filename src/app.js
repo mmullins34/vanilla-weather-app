@@ -3,14 +3,12 @@ let now = new Date();
 let dateInput = document.querySelector("#date-input");
 
 let date = now.getDate();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
+
+let time = now.toLocaleString("en-US", {
+  hour: "numeric",
+  minute: "numeric",
+  hour12: true,
+});
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
@@ -31,7 +29,7 @@ let months = [
 ];
 let month = months[now.getMonth()];
 
-dateInput.innerHTML = `${day} ${month} ${date} ${hours}:${minutes}`;
+dateInput.innerHTML = `${day} ${month} ${date} ${time}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -123,27 +121,20 @@ let fTemp = null;
 let cityForm = document.querySelector("#city-form");
 cityForm.addEventListener("submit", handleSubmit);
 
-function displayCTemp(event) {
-  event.preventDefault();
-  let cTemp = (fTemp - 32) * (5 / 9);
-  fLink.classList.remove("active");
-  cLink.classList.add("active");
-  let tempElement = document.querySelector("#main-temp");
-  tempElement.innerHTML = Math.round(cTemp);
+function findPosition(position) {
+  let apiKey = "1d038ee28ef2727a9f0310860ac10ae9";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+  axios.get(url).then(displayTemp);
 }
 
-let cLink = document.querySelector("#c-link");
-cLink.addEventListener("click", displayCTemp);
-
-function displayFTemp(event) {
+function showCurrentCity(event) {
   event.preventDefault();
-  fLink.classList.add("active");
-  cLink.classList.remove("active");
-  let tempElement = document.querySelector("#main-temp");
-  tempElement.innerHTML = Math.round(fTemp);
+  navigator.geolocation.getCurrentPosition(findPosition);
 }
 
-let fLink = document.querySelector("#f-link");
-fLink.addEventListener("click", displayFTemp);
+let button = document.querySelector("#current-location");
+button.addEventListener("click", showCurrentCity);
 
 searchCity("Atlanta");
